@@ -26,5 +26,7 @@ class Main
         System.out.println("Archil" + " " + "Sikharulidze" +
                 ". Welcome to my First " +
                 "Lesson to...........");
+
+        // This is an example comment for Git
     }
 }
