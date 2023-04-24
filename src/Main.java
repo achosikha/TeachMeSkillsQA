@@ -2,6 +2,8 @@
 Добро пожаловать. Это многолинейный комментарий. Пишем что хотим и сколько хотим.
  */
 
+import java.util.Scanner;
+
 // Главная реализация моего объекта это Класс
 class Main
 {
@@ -28,5 +30,9 @@ class Main
                 "Lesson to...........");
 
         // This is an example comment for Git
+        System.out.println();
+        System.out.print("Please, enter your name & surname: ");
+        Scanner scanner = new Scanner(System.in);
+        scanner.nextLine();
     }
 }
