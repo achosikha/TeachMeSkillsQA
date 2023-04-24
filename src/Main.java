@@ -36,5 +36,10 @@ class Main
         scanner.nextLine();
 
         // New Comment
+
+        String name = "123";
+        int age = 34;
+        double weight = 88.1;
+        char symbol = 'A';
     }
 }
