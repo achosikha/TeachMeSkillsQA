@@ -7,6 +7,12 @@ public class Loop {
         doWhileLoop();
         System.out.println();
         forLoop();
+
+        // Разобраться следующие ключевые слова в связке с
+        // условными операторами и циклами
+        // break - сломать схему
+        // continue - пропустить одну итерацию
+        // return - закрыть весь метод
     }
 
     public static void whileLoop()
