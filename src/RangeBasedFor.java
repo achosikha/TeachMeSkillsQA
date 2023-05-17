@@ -1,4 +1,4 @@
-public class Additional {
+public class RangeBasedFor {
     public static void main(String[] args) {
         allAboutFor();
     }
