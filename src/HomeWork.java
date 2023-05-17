@@ -3,7 +3,7 @@ public class HomeWork {
     public static void main(String[] args) {
 
         System.out.println("Task2");
-        swithcOperator("8");
+        switchOperator("8");
         System.out.println();
         System.out.println("Task2");
         ifSeasons(2);
@@ -39,7 +39,7 @@ public class HomeWork {
     }
 
     //task1
-    public static void swithcOperator(String month) {
+    public static void switchOperator(String month) {
 
         switch (month) {
             case "1":
