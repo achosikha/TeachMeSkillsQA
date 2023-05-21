@@ -1,102 +1,64 @@
-import java.io.IOException;
 import java.util.Scanner;
 
+// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
+// then press Enter. You can now see whitespace characters in your code.
 public class Main {
-    public static final Scanner scanner = new Scanner(System.in);
-
     public static void main(String[] args) {
-        // Создать метод, который получает данные человека и их выводит
-        getPersonalData();
-
-        // Создать метод, который получает символ и выводит сам сивол вместе с его чичловым значением
-        //charToInt();
-
-        // Написать метод с вычислением BMI
-        // getBMI();
+        // getInformation();
+        // initializeVariables();
+        getBMI();
     }
-
-    public static void getPersonalData()
+    public static void getInformation()
     {
-        Scanner cout = new Scanner(System.in);
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter name:");
+        String name = in.nextLine();
 
-        System.out.print("Please, enter your name: ");
-        String name = cout.nextLine();
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter surname:");
+        String surname = sc.nextLine();
 
-        System.out.print("Please, enter your surname: ");
-        String surname = cout.nextLine();
+        Scanner as = new Scanner(System.in);
+        System.out.println("Enter age:");
+        int age = as.nextInt();
 
-        System.out.print("Please, enter your age: ");
-        int age = cout.nextInt();
+        Scanner aw = new Scanner(System.in);
+        System.out.println("Enter height:");
+        int height = aw.nextInt();
 
-        System.out.print("Please, enter your height: ");
-        int height = cout.nextInt();
+        Scanner aq = new Scanner(System.in);
+        System.out.println("Enter weight:");
+        int weight = aq.nextInt();
 
-        System.out.print("Please, enter your weight: ");
-        float weight = cout.nextFloat();
-
-        System.out.println();
-
-        System.out.println("Your name is: " + name);
-        System.out.println("Your surname is: " + surname);
-        System.out.println("Your age is: " + age);
-        System.out.println("Your height is: " + height);
-        System.out.println("Your weight is: " + weight);
+        System.out.println("Name: " + name );
+        System.out.println("Surname: " + surname);
+        System.out.println("Age: " + age);
+        System.out.println("Height: " + height);
+        System.out.println("Weight: " + weight);
     }
+    public static void initializeVariables()
+    {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter symbol:");
+        char mySymbol = in.next().charAt(0);
+        int x = mySymbol;
 
-    public static void charToInt() throws IOException {
-        Scanner cout = new Scanner(System.in);
-
-        System.out.print("Please enter a symbol: ");
-        char symbol = (char) cout.nextInt(); // char - 0 - 255 (ASCII), int 67 -> (char)
-
-        System.out.println("You have entered a symbol: " + symbol);
-        System.out.println("This symbols numeric meaning is: " + (int) symbol);
-
-        // int oneNumber = System.in.read(); // one element per buffer
-
-        // int oneSymbol = cout.nextLine().charAt(0);
-        // String - Archil - char 'A' 'r' 'c' 'h' 'i' 'l' (array - index[0])
+        System.out.println(mySymbol + " - " + x);
     }
-
     public static void getBMI()
     {
-        Scanner cout = new Scanner(System.in);
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter height:");
+        int height = in.nextInt();
 
-        // enter height
-        System.out.print("Please, enter your height: ");
-        double height = cout.nextDouble();
-        height = (height * height) / 10000;
+        Scanner aq = new Scanner(System.in);
+        System.out.println("Enter weight:");
 
-        // enter weight
-        System.out.print("Please, enter your weight: ");
-        double weight = cout.nextDouble();
+        double weight = aq.nextDouble();
+        double height1 = (double) height  / 100;
+        double height2 = Math.pow(height1,2);
+        double BMI = weight / height2;
 
-        // BMI = weight / (height*height)
-        double BMI = weight / height;
-
-        System.out.println("Your BMI is: " + BMI);
-        cout.close();
-    }
-
-    public static void parseVariables()
-    {
-        // неявное преобразование
-        // от малого к высокому - from byte to double (long)
-
-        // преобразование путем понижение ранка переменной - когда от double (long) к byte
-        // cast - (_date_type) _variable : (char) number;
-
-        // Несовместимые типы данных
-        String number = "1221";
-
-        // No casting & no hidden transformation
-        // int intNum = (int) number; // error
-        // String numNum = (String) intNum; // error
-
-        // Parsing
-        int intNum = Integer.parseInt(number); // from String to Integer
-        // Integer -> class, method parseInt(String _var)
-
-        String getValueOf = String.valueOf(intNum); // from int to String
+        System.out.println("Result: " + BMI);
     }
 }
