@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Just {
 
 
@@ -8,10 +10,12 @@ public class Just {
         System.out.println(obj1.hashCode());
         obj1 = (JustX) obj.clone();
         System.out.println(obj1.hashCode());
+        obj1.setName("asd");
+        System.out.println(obj.compareTo(obj1));
     }
 }
 
-class JustX implements Cloneable
+class JustX implements Cloneable, Comparable
 {
     private String name = "JustX";
 
@@ -26,5 +30,11 @@ class JustX implements Cloneable
     @Override
     protected Object clone() throws CloneNotSupportedException {
         return super.clone();
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        JustX jO = (JustX) o;
+        return (this.name.equals(jO.name)) ? 0 : -1;
     }
 }
