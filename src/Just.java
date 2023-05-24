@@ -1,8 +1,9 @@
 import java.util.Objects;
 
 public class Just {
-
-
+    // Comparable
+    // Comparator
+    // Cloneable
     public static void main(String[] args) throws CloneNotSupportedException {
         JustX obj = new JustX();
         System.out.println(obj.hashCode());
