@@ -43,7 +43,7 @@ public class MyString {
         // equals - bool type, true or false
         System.out.println("str1.equals(str3): " + str1.equals(str3));
 
-        // euqlsIgnoreCase()
+        // equalsIgnoreCase()
         System.out.println("str4: " + str4);
         System.out.println("str5: " + str5);
         System.out.println("str4.equalsIgnoreCase(str5): " + str4.equalsIgnoreCase(str5) + "\n\n");
@@ -74,7 +74,7 @@ public class MyString {
 
         // substring(index) -> substring(index, index)
 
-        // splite(char, limit)
+        // split(char, limit)
         System.out.println("\n\n");
         String names = "Ilona Igor Kiril Nikolai";
         String[] splittedNames = names.split(" ");
