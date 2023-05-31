@@ -1,41 +1,18 @@
 package CreditCard;
 
+// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
+// then press Enter. You can now see whitespace characters in your code.
 public class MyMain {
     public static void main(String[] args) {
-        // To Start CreditCard
-        CreditCard tbc = new CreditCard("000TBC8606845", 100);
-        CreditCard bog = new CreditCard("098BOG2138995", 10000);
-        CreditCard liberty = new CreditCard("0924LBT9232385", 10);
-
-        tbc.getCreditCardInfo();
-        System.out.println();
-        bog.getCreditCardInfo();
-        System.out.println();
-        liberty.getCreditCardInfo();
-
-        tbc.cashOut(40);
-        bog.cashOut(400);
-        liberty.cashOut(5);
-
-        System.out.println();
-
-        tbc.getCreditCardInfo();
-        System.out.println();
-        bog.getCreditCardInfo();
-        System.out.println();
-        liberty.getCreditCardInfo();
-
-        System.out.println();
-
-        tbc.addAmount(100);
-        bog.addAmount(4);
-        liberty.addAmount(11);
-        System.out.println();
-
-        tbc.getCreditCardInfo();
-        System.out.println();
-        bog.getCreditCardInfo();
-        System.out.println();
-        liberty.getCreditCardInfo();
+        CreditCard fist = new CreditCard("Papkova Anastasiya", "4662298480280412", 0);
+        CreditCard second = new CreditCard("Buyko Tatyana", "4086416846303938", 0);
+        CreditCard third = new CreditCard("Buyko Mike", "30864168487503938", 1200);
+        fist.getCardCreditInfo();
+        second.getCardCreditInfo();
+        third.getCardCreditInfo();
+        fist.getSumBalance();
+        second.getSumBalance();
+        third.getWithdrawalOfMoney();
     }
+
 }

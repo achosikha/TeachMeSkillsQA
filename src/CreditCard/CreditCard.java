@@ -1,32 +1,49 @@
 package CreditCard;
+import java.util.Scanner;
 
-public class CreditCard {
+class CreditCard {
+    private String cardNumber;
     private double balance;
-    private String account;
+    private String cardHolder;
 
     public CreditCard()
     {
-        this.account = "XXXX-XXXX-XXXX-XXXX";
+        this.cardHolder = "Unknown Holder";
+        this.cardNumber = "Unknown Card Number";
     }
-    public CreditCard(String account, int balance)
+
+    public CreditCard (String cardHolder, String cardNumber, double balance)
     {
-        this.account = account;
+        this.cardHolder = cardHolder;
+        this.cardNumber = cardNumber;
         this.balance = balance;
     }
-
-    void getCreditCardInfo()
+    public void getCardCreditInfo()
     {
-        System.out.println("Credit Card Number is: " + this.account);
-        System.out.println("Credit Card Balance is: " + this.balance);
+        System.out.println("Credit Card Holder is " + this.cardHolder);
+        System.out.println("Credit Card Number is " + this.cardNumber);
+        System.out.println("Credit Card Balance is " + this.balance);
     }
-
-    void addAmount(int amount)
-    {
-        this.balance += amount;
+    public void getSumBalance() {
+        System.out.print("Enter sum ");
+        Scanner console = new Scanner(System.in);
+        {
+            balance += console.nextInt();
+            System.out.println("Credit Card Holder is " + this.cardHolder);
+            System.out.println("Credit Card Number is " + this.cardNumber);
+            System.out.print("Credit Card Balance is " + balance);
+        }
     }
-
-    void cashOut(int amount)
+    public void getWithdrawalOfMoney()
     {
-        this.balance -= amount;
+        System.out.print("Enter amount ");
+        Scanner input = new Scanner(System.in);
+        {
+            balance -= input.nextInt();
+            System.out.println("Credit Card Holder is " + this.cardHolder);
+            System.out.println("Credit Card Number is " + this.cardNumber);
+            System.out.print("Credit Card Balance is " + balance);
+            balance--;
+        }
     }
 }
