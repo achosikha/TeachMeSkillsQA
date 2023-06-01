@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class ArraysMultiple {
     public static void main(String[] args) {
         // double and n-dimensional arrays
