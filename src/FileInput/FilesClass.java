@@ -6,6 +6,8 @@ import java.nio.file.Path;
 
 public class FilesClass {
     public static void main(String[] args) {
+        // Scanner read = new Scanner ("document");
+
         try
         {
             String textInfo = Files.readAllLines(Path.of("src/text.txt")).toString();
