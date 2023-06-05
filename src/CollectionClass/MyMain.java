@@ -23,8 +23,8 @@ public class MyMain {
 //
 //        System.out.println("------------------------------------------------------------------");
 
-        // 1. non-synchronized
-        // 2. ordered
+        // 1. non-synchronized -> во время работы потоков, надо обеспечить правильную работу
+        // 2. ordered -> каждый раз, когда мы добавляем элемент у него есть свои индекс
         // 3. unsorted
         // 4. can contain the same elements
         // 5. can contain the null
