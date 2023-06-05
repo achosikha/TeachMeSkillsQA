@@ -4,7 +4,8 @@ import java.util.*;
 
 public class HashSetClass {
     public static void main(String[] args) {
-        getHashSet();
+        // getHashSet();
+        getLinkedHashSet();
     }
 
     public static void getHashSet()
@@ -41,5 +42,27 @@ public class HashSetClass {
             String tempValue = iteratorForHashSet.next();
             System.out.println(tempValue + " hash code is: " + tempValue.hashCode());
         }
+    }
+
+    public static void getLinkedHashSet()
+    {
+        // LinkedHashSet
+        // 1. The same as HashSet but
+        // 2. Ordered
+        // 3. Access to Elements according to their insertion
+        // 4. Not synchronized
+        Set<Integer> linkedHashSet = new LinkedHashSet<>(Arrays.asList(12, 9, 10, -1));
+
+        System.out.println(linkedHashSet);
+
+        linkedHashSet.add(123);
+
+        System.out.println(linkedHashSet);
+
+        linkedHashSet.remove(12);
+
+        System.out.println(linkedHashSet);
+
+        // Iterator
     }
 }
